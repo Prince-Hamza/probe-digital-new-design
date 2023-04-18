@@ -1,0 +1,28 @@
+
+.listItem {
+    height: 250px;
+    margin-left: 20px;
+}
+
+
+.underline {
+    width: 20%;
+    height: 10px;
+    margin-bottom: 25px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media (max-width:500px) {
+    .underline {
+        width: 100%;
+        height: 10px;
+        margin-bottom: 25px;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

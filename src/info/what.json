@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Search on person",
+        "description": "Our simple but powerful search engine will scan our extensive data sources to identify initial reports that can be then used for deeper searches using our other products.",
+        "image": "company"
+    },
+    {
+        "name": "Search person to company connection",
+        "description": "Our world class AI engine can identify connectivity between person and company through intermediaries.",
+        "image": "person"
+    },
+    {
+        "name": "Search person to person connection",
+        "description": "Our world class AI engine can identify connectivity between persons through layers of hidden intermediaries.",
+        "image": "connection"
+    }
+]

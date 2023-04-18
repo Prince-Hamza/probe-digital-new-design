@@ -1,0 +1,39 @@
+.mainTitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 80px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+    color: white
+}
+
+.brandName {
+    width: 25%;
+    height: 40px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+
+
+.primaryIllustration {
+    width: 470px;
+    height: 450px
+}
+
+@media (max-width:500px) {
+    .mainTitle {
+        font: 2rem poppins;
+        color: white;
+        margin-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    .primaryIllustration {
+        width: 300px;
+        height: 300px;
+        margin-left: 20px
+    }
+
+}
