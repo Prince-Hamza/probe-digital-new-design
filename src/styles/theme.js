@@ -22,6 +22,14 @@ export const themeStyles = ({
         fontSize: '64px',
         lineHeight: '80px'
     },
+    sectionTitle: {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 600,
+        fontSize: '40px',
+        lineHeight: '60px',
+        color: '#021B41'
+    },
     heading1: {
         fontFamily: 'Poppins',
         fontStyle: 'normal',
@@ -31,9 +39,9 @@ export const themeStyles = ({
         color: 'white',
         cursor: 'pointer'
     },
-
     heading2: {
         fontFamily: 'Poppins',
+        fontStyle: 'normal',
         fontSize: '24px',
         fontWeight: 600,
         lineHeight: '36px',
@@ -42,12 +50,37 @@ export const themeStyles = ({
         color: 'white',
         cursor: 'pointer'
     },
+    heading3: {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 500,
+        fontSize: '20px',
+        lineHeight: '30px',
+        color: '#021B41'
+    },
+    footerText: {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 400,
+        fontSize: '16px',
+        lineHeight: '24px',
+        color: '#212529'
+    },
+    description: {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 400,
+        fontSize: '20px',
+        lineHeight: '36px',
+        color: '#212529'
+    },
 
     underline: {
         height: '10px',
         marginBottom: '25px',
-        ...Content.rowLeftStart 
+        ...Content.rowLeftStart
     },
+
     listWrap: {
         marginBottom: '5px',
         marginLeft: '0px',
@@ -82,14 +115,4 @@ export const themeStyles = ({
         textAlign: 'center'
     },
     colors: palleteV1,
-
-
-    main: {
-
-    },
-
-
-
-
-
 })

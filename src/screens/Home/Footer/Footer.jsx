@@ -18,7 +18,7 @@ function Footer() {
         <Row style={{ ...themeStyles.container, padding: '10px' }}>
             <Col lg={4}>
                 <Image src={logo} />
-                <p style={themeStyles.para}>
+                <p style={themeStyles.footerText}>
                     Probe Digital is designed to ease the burden of trying to understand the links between people, companies and other entities.
                 </p>
 
@@ -38,9 +38,9 @@ function Footer() {
                     Services
                 </p>
                 <div style={{ textAlign: 'left' }} >
-                    <p style={themeStyles.para}>  Search on Person  </p>
-                    <p style={themeStyles.para}>   Search Person to Company Connection   </p>
-                    <p style={themeStyles.para}>  Search Person to Company Connection   </p>
+                    <p style={themeStyles.footerText}>  Search on Person  </p>
+                    <p style={themeStyles.footerText}>   Search Person to Company Connection   </p>
+                    <p style={themeStyles.footerText}>  Search Person to Company Connection   </p>
                 </div>
             </Col>
 
@@ -57,7 +57,7 @@ function Footer() {
                         <Image src={headphone} />
                     </Col>
                     <Col lg={10} xs={10} style={{ ...Content.colCenterLeft, ...Styles.textWrap }} >
-                        <p style={{ ...themeStyles.para, ...Styles.row, textAlign: 'left' }} > 112 Buckingham Palace Road Westminster London SW1W 0SR </p>
+                        <p style={{ ...themeStyles.footerText, ...Styles.row, textAlign: 'left' }} > 112 Buckingham Palace Road Westminster London SW1W 0SR </p>
                     </Col>
                 </Row>
 

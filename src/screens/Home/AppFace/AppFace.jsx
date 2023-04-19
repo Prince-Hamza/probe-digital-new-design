@@ -35,7 +35,7 @@ function AppFace(props) {
 
 
                     <div style={{ textAlign: 'left', width: '95%', padding: '5px', marginLeft: '10px' }} >
-                        <p style={themeStyles.heading2} >
+                        <p style={themeStyles.heading2}>
                             Trusted by companies all over the world
                         </p>
                     </div>
@@ -169,8 +169,7 @@ const Styles = ({
         width: '202px',
         height: '48px',
         backgroundColor: palleteV1.green,
-        font: '16px poppins',
-        color: '#021B41'
+        ...themeStyles.heading3
     },
     isomorphic: {
         width: '470px',

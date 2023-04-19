@@ -13,13 +13,13 @@ function Goal() {
             <Col lg={7}>
                 <span style={{ marginBottom: '35px' }} />
 
-                <Row style={{ ...themeStyles.title, ...Styles.container }}>
+                <Row style={{ ...themeStyles.sectionTitle, ...Styles.container }}>
                     Our Goal
                 </Row>
 
-                <Row style={{ ...themeStyles.underline, ...Styles.container, marginBottom: '25px' }}>
-                    <Image className={'underline'} src={underline} />
-                </Row>
+                <Col lg={12} xs={12}>
+                    <Image className='underline' src={underline} />
+                </Col>
 
                 {/* <Row style={{ ...themeStyles.subTitle, ...Styles.container }}>
                     <p style={{ textAlign: 'left' }}> The end-to-end background intelligence program </p>
@@ -27,7 +27,7 @@ function Goal() {
 
                 <Row>
                     <div style={Styles.textWrap}>
-                        <p style={{ textAlign: 'left', fontFamily: 'poppins', fontWeight: 400 }} >
+                        <p style={{ textAlign: 'left', ...themeStyles.description }} >
                             B2B or P2P connections & Network Analysis
                             Discovering unsavoury person in a network
                             Properties in Companies name & Network Analysis

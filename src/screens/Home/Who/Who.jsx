@@ -12,7 +12,7 @@ function Who(props) {
             <Col lg={7}>
                 <span style={{ marginBottom: '50px' }} />
 
-                <Row style={{ ...themeStyles.title, ...Styles.container }}>
+                <Row style={{ ...themeStyles.sectionTitle, ...Styles.container }}>
                     Who are We
                 </Row>
 
@@ -22,12 +22,12 @@ function Who(props) {
 
 
                 <Row style={{ ...themeStyles.subTitle, ...Styles.container }}>
-                    <p style={{ textAlign: 'left' }}> The end-to-end background intelligence program </p>
+                    <p style={{ textAlign: 'left', ...themeStyles.description }}> The end-to-end background intelligence program </p>
                 </Row>
 
                 <Row>
                     <div style={Styles.textWrap}>
-                        <p style={{ textAlign: 'left', fontFamily: 'poppins', fontWeight: 400 }} >
+                        <p style={{ textAlign: 'left', ...themeStyles.description }} >
                             Probe Digital was established in 2019 to offer individuals and companies the ability to explore and uncover connections between entities prior to establishing business relationships. Anybody who has conducted research for a background check or investigation will have encountered challenges in knowing how various entities are connected or are related to dubious persons.
                         </p>
                     </div>

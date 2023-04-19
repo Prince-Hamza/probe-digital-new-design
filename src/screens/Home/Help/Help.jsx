@@ -10,14 +10,16 @@ function Help() {
     return (
         <Row style={{ ...themeStyles.container, marginBottom: '150px' }}>
             <span style={{ marginBottom: '50px' }} />
-            <Row style={themeStyles.title}> Who We Help </Row>
+            <Row style={themeStyles.sectionTitle}> Who We Help </Row>
 
             <Col lg={12} xs={12}>
                 <Image className='underline' src={underline} />
             </Col>
 
             <Row style={{ ...themeStyles.container, marginBottom: '80px' }}>
-                We attract clients who value our quality of service, professionalism, creativity and expertise. Our clientele includes national and international law firms, corporations, financial institutions and private individuals.
+                <p style={themeStyles.description} >
+                    We attract clients who value our quality of service, professionalism, creativity and expertise. Our clientele includes national and international law firms, corporations, financial institutions and private individuals.
+                </p>
             </Row>
 
             <Row style={themeStyles.listWrap}>

@@ -19,7 +19,7 @@ function description() {
     return (
         <Row>
             <div style={Styles.textWrap}>
-                <p style={{ textAlign: 'left', fontFamily: 'poppins', fontWeight: 400 }} >
+                <p style={{ textAlign: 'left', ...themeStyles.description }} >
                     B2B or P2P connections & Network Analysis
                     Discovering unsavoury person in a network
                     Properties in Companies name & Network Analysis
@@ -45,13 +45,13 @@ function Approach() {
             <Col lg={6} xs={12}>
                 <span style={{ marginBottom: '35px' }} />
 
-                <Row style={{ ...Styles.container, ...themeStyles.title }}>
+                <Row style={{ ...Styles.container, ...themeStyles.sectionTitle }}>
                     Our Approach
                 </Row>
 
-                <Row style={{ ...themeStyles.underline, ...Styles.container, marginBottom: '25px' }}>
-                    <Image className={'underline'} src={underline} />
-                </Row>
+                <Col lg={12} xs={12}>
+                    <Image className='underline' src={underline} />
+                </Col>
 
                 {description()}
 

@@ -1,20 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
-import { themeStyles } from '../../styles/theme';
-import Gradient from '../../images/dashboard/LeftBarGradient.png'
-import { Content } from '../../styles/styles';
-import logo from '../../images/logo.png'
-import Background from '../../images/dashboard/dashTheme.png'
-import personToPerson from '../../images/dashboard/p2p.png'
-import searchOnPerson from '../../images/dashboard/sop.png'
-import personToCompany from '../../images/dashboard/p2c.png'
-import illus from '../../images/dashboard/data-illustration.png'
-import toggleBlue from '../../images/dashboard/toggleBlue.png'
-import arrowBlue from '../../images/dashboard/arrowBlue.png'
-import toggle from '../../images/dashboard/toggle.png'
-import arrow from '../../images/dashboard/arrow.png'
-import { AppContext } from '../../Context';
-
+import { themeStyles } from '../../../styles/theme';
+import Gradient from '../../../images/dashboard/LeftBarGradient.png'
+import { Content } from '../../../styles/styles';
+import logo from '../../../images/logo.png'
+import Background from '../../../images/dashboard/dashTheme.png'
+import personToPerson from '../../../images/dashboard/p2p.png'
+import searchOnPerson from '../../../images/dashboard/sop.png'
+import personToCompany from '../../../images/dashboard/p2c.png'
+import illus from '../../../images/dashboard/data-illustration.png'
+import toggleBlue from '../../../images/dashboard/toggleBlue.png'
+import arrowBlue from '../../../images/dashboard/arrowBlue.png'
+import toggle from '../../../images/dashboard/toggle.png'
+import arrow from '../../../images/dashboard/arrow.png'
+import { AppContext } from '../../../Context';
 
 function Dashboard(props) {
 

@@ -8,7 +8,11 @@ import Services from './screens/Services/Services'
 import Pricing from './screens/Pricing/Pricing'
 import Contact from './screens/Contact/Contact'
 import Login from './screens/Login/Login'
-import Dashboard from './screens/Dashboard/Dashboard'
+import Dashboard from './screens/Dashboard/variation1/Dashboard'
+import DashboardV2 from './screens/Dashboard/variation2/DashboardV2'
+import DashboardV3 from './screens/Dashboard/variation3/DashboardV3'
+import DashboardV4 from './screens/Dashboard/variation4/DashboardV4'
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css'
 
@@ -22,7 +26,11 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Main />} />
-            <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/dashboard/v1" element={<Dashboard />} />
+            <Route exact path="/dashboard/v2" element={<DashboardV2 />} />
+            <Route exact path="/dashboard/v3" element={<DashboardV3 />} />
+            <Route exact path="/dashboard/v4" element={<DashboardV4 />} />
+
             <Route exact path="/about" element={<About />} />
             <Route exact path="/services" element={<Services />} />
             <Route exact path="/pricing" element={<Pricing />} />
