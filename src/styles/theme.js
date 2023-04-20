@@ -114,5 +114,13 @@ export const themeStyles = ({
         color: '#212529',
         textAlign: 'center'
     },
+    tableText:{
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 500,
+        fontSize: '16px',
+        lineHeight: '20px',
+        color: '#212529'
+    },
     colors: palleteV1,
 })

@@ -73,6 +73,12 @@ export const Content = ({
         flexDirection: 'row',
         alignItems: 'flex-start',
         justifyContent: 'center'
+    },
+    rowCenterEnd: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        justifyContent: 'center'
     }
 
 })
