@@ -13,33 +13,43 @@ function Layout(props) {
     return (
         <Col lg={12}>
 
-            <Row lg={12} style={Styles.header} >
-                <Col lg={6} style={{ ...Content.colTopLeft, }} >
+            <Row lg={12} xs={12} style={Styles.header} >
+                <Col lg={6} xs={12} style={{ ...Content.colTopLeft, }} >
                     <p style={{ ...themeStyles.heading1, color: '#222', marginLeft: '15px' }}> Dashboard </p>
                 </Col>
-                <Col lg={6} style={Content.rowCenterEnd}>
+                <Col lg={6} xs={12} style={Content.rowCenterEnd}>
                     <Image style={{ cursor: 'pointer' }} src={HiFrame} />
                 </Col>
             </Row>
 
 
 
-            <Col lg={12} style={Styles.pageRemain}>
+            <Col lg={12} xs={12} style={Styles.pageRemain}>
 
                 <Row style={Styles.filtersWrap}>
-                    <div style={Styles.filterText}>
-                        First Name
-                    </div>
+                    <Col lg={6} xs={12} >
+                        <Row style={{ width: '100%' }} >
+                            <div style={{ width: '160px' }} >
+                                First Name
+                            </div>
+                            <input style={Styles.filterInput} value={'James'} />
+                        </Row>
+                    </Col>
 
-                    <input style={Styles.filterInput} value={'James'} />
-
-                    <div style={Styles.filterText}>
-                        Surname
-                    </div>
-
-                    <input style={Styles.filterInput} value={'Smithson'} />
+                    <Col lg={6} xs={12} >
+                        <Row style={{ width: '100%' }} >
+                            <div style={{ width: '160px' }} >
+                                Surname
+                            </div>
+                            <input style={Styles.filterInput} value={'Smithson'} />
+                        </Row>
+                    </Col>
 
                 </Row>
+
+
+
+
 
                 <br />
 
@@ -50,7 +60,7 @@ function Layout(props) {
 
 
 
-                <Row style={{ ...Styles.bar, padding: '15px', overflow:'auto' }}>
+                <Row style={{ ...Styles.bar, padding: '15px', overflow: 'auto' }}>
                     <Col lg={12} >
                         <Row style={{ width: '100%' }}>
 
@@ -128,7 +138,7 @@ export default Layout
 
 const Styles = ({
     header: {
-        height: '80px',
+        height: 'auto',
         backgroundColor: 'white',
         ...Content.rowSpaceBetween,
         padding: '0px'
