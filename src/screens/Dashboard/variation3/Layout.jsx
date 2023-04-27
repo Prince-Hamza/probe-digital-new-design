@@ -7,6 +7,7 @@ import HiFrame from '../../../images/dashboard/HiFrame.png'
 import ResultLine from '../../../images/dashboard/ExportLine.png'
 import { headings } from '../../../info/dashVariation3Headings'
 import tableInfo from '../../../info/tableInfo.json'
+import './mobile.css'
 
 function Layout(props) {
 
@@ -14,22 +15,23 @@ function Layout(props) {
         <Col lg={12}>
 
             <Row lg={12} xs={12} style={Styles.header} >
-                <Col lg={6} xs={12} style={{ ...Content.colTopLeft, }} >
+                <Col lg={6} xs={6} style={{ ...Content.colTopLeft, }} >
                     <p style={{ ...themeStyles.heading1, color: '#222', marginLeft: '15px' }}> Dashboard </p>
                 </Col>
-                <Col lg={6} xs={12} style={Content.rowCenterEnd}>
+                <Col lg={6} xs={6} style={Content.rowCenterEnd}>
                     <Image style={{ cursor: 'pointer' }} src={HiFrame} />
                 </Col>
             </Row>
 
+            <br />
 
 
             <Col lg={12} xs={12} style={Styles.pageRemain}>
 
                 <Row style={Styles.filtersWrap}>
-                    <Col lg={6} xs={12} >
+                    <Col lg={6} xs={12}  >
                         <Row style={{ width: '100%' }} >
-                            <div style={{ width: '160px' }} >
+                            <div style={{ width: '160px', marginTop: '9px' }} >
                                 First Name
                             </div>
                             <input style={Styles.filterInput} value={'James'} />
@@ -38,7 +40,7 @@ function Layout(props) {
 
                     <Col lg={6} xs={12} >
                         <Row style={{ width: '100%' }} >
-                            <div style={{ width: '160px' }} >
+                            <div style={{ width: '160px', marginTop: '9px' }} >
                                 Surname
                             </div>
                             <input style={Styles.filterInput} value={'Smithson'} />
@@ -46,10 +48,6 @@ function Layout(props) {
                     </Col>
 
                 </Row>
-
-
-
-
 
                 <br />
 
@@ -59,73 +57,52 @@ function Layout(props) {
                 </Row>
 
 
+                <Col lg={12} xs={12} style={{ padding: '0px' }} >
 
-                <Row style={{ ...Styles.bar, padding: '15px', overflow: 'auto' }}>
-                    <Col lg={12} >
-                        <Row style={{ width: '100%' }}>
+                    {tableInfo.map((item) => {
+                        return (
+                            <Row className={'tableDataWrap'} >
 
-                            <Form.Control type={'text'} style={Styles.checkbox} />
-                            {headings.map((item) => {
-                                return (
-                                    <Row style={Styles.headingItem} >
-                                        <Image src={item.icon} style={{ width: '40px', height: '20px' }} />
-                                        <div style={{ textAlign: 'left', width: '75px', font: '10px poppins' }} > {item.heading} </div>
-                                    </Row>
-                                )
-                            })}
-                        </Row>
-                    </Col>
-                </Row>
+                                <Col lg={1} xs={12}  >
+                                    <Form.Control type={'text'} style={{ ...Styles.checkbox, marginRight: '28px' }} />
+                                </Col>
 
+                                <Col lg={1} xs={12} style={{ ...Styles.headingItem }}>
+                                    <div style={{ textAlign: 'left', ...themeStyles.tableText }} > {item.firstName} </div>
+                                </Col>
 
-
-                {tableInfo.map((item) => {
-                    return (
-                        <Row style={{ ...Styles.bar, padding: '15px', width: '100%', overflow: 'auto' }} >
-                            <Form.Control type={'text'} style={{ ...Styles.checkbox, marginRight: '28px' }} />
-
-                            <div style={{ ...Styles.headingItem }}>
-                                <div style={{ textAlign: 'left', width: '75px', ...themeStyles.tableText }} > {item.firstName} </div>
-                            </div>
-
-                            <div style={{ ...Styles.headingItem, }}>
-                                <div style={{ textAlign: 'left', width: '75px', ...themeStyles.tableText }} > {item.surname} </div>
-                            </div>
+                                <Col lg={1} xs={12} style={{ ...Styles.headingItem, }}>
+                                    <div style={{ textAlign: 'left', ...themeStyles.tableText }} > {item.surname} </div>
+                                </Col>
 
 
-                            <div style={{ ...Styles.headingItem, }}>
-                                <div style={{ textAlign: 'left', width: '75px', ...themeStyles.tableText }}> {item.dob}  </div>
-                            </div>
+                                <Col lg={1} xs={12} style={{ ...Styles.headingItem, }}>
+                                    <div style={{ textAlign: 'left', ...themeStyles.tableText }}> {item.dob}  </div>
+                                </Col>
 
 
-                            <div style={{ ...Styles.headingItem, }}>
-                                <div style={{ textAlign: 'left', width: '75px', ...themeStyles.tableText }} > {item.age} </div>
-                            </div>
+                                <Col lg={1} xs={12} style={{ ...Styles.headingItem, }}>
+                                    <div style={{ textAlign: 'left', ...themeStyles.tableText }} > {item.age} </div>
+                                </Col>
 
 
-                            <div style={{ ...Styles.headingItem, }}>
-                                <div style={{ textAlign: 'left', width: '75px', ...themeStyles.tableText }} > {item.currentCompany} </div>
-                            </div>
+                                <Col lg={1} xs={12} style={{ ...Styles.headingItem, }}>
+                                    <div style={{ textAlign: 'left', ...themeStyles.tableText }} > {item.currentCompany} </div>
+                                </Col>
 
 
-                            <div style={{ ...Styles.headingItem, }}>
-                                <div style={{ textAlign: 'left', width: '75px', ...themeStyles.tableText }} > {item.previousCompany} </div>
-                            </div>
+                                <Col lg={1} xs={12} style={{ ...Styles.headingItem, }}>
+                                    <div style={{ textAlign: 'left', ...themeStyles.tableText }} > {item.previousCompany} </div>
+                                </Col>
 
-                        </Row>
-                    )
-                })}
+                            </Row>
+                        )
+                    })}
 
 
+                </Col>
 
-                {/* 
-                <Col lg={12} style={{ backgroundColor: 'white', width: '100%', height: '700px', padding: '15px' }} >
-                    <Row style={{ width: '100%' }} >
-                        <Col lg={1}>
-                            <Form.Control type={'text'} style={Styles.checkbox} />
-                        </Col>
-                    </Row>
-                </Col> */}
+
 
             </Col>
 
@@ -154,7 +131,7 @@ const Styles = ({
     },
     filterInput: {
         width: '20%',
-        height: '56px',
+        height: '40px',
         border: '1px solid #E9E9E9',
         bordeRadius: '8px',
         outline: 'none'
@@ -164,7 +141,9 @@ const Styles = ({
         width: '120px'
     },
     pageRemain: {
-        padding: '25px',
+        padding: '10px',
+        height: 'auto',
+        ...Content.colCenterLeft
         // border: 'solid 1px'
     },
     bar: {
@@ -178,6 +157,7 @@ const Styles = ({
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginLeft: '0px',
+        marginBottom: '3px',
         borderRadius: '10px'
     },
     checkbox: {
@@ -186,7 +166,6 @@ const Styles = ({
     },
     headingItem: {
         // border: 'solid 1px',
-        width: '150px',
         marginLeft: '10px',
         marginRight: '10px',
         ...Content.rowCentrify

@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
-import { Col, Row, Image } from 'react-bootstrap';
-import { themeStyles } from '../../../styles/theme';
+import React, { useContext, useState } from 'react'
+import { Col, Row, Image } from 'react-bootstrap'
+import { themeStyles } from '../../../styles/theme'
 import Gradient from '../../../images/dashboard/LeftBarGradient.png'
-import Content from './Layout';
+import Content from './Layout'
 import logo from '../../../images/logo.png'
 import Background from '../../../images/dashboard/dashTheme.png'
 import personToPerson from '../../../images/dashboard/p2p.png'
@@ -15,8 +15,8 @@ import toggle from '../../../images/dashboard/toggle.png'
 import arrow from '../../../images/dashboard/arrow.png'
 import { AppContext } from '../../../Context'
 import menu from '../../../images/menu.png'
-import Layout from './Layout';
-import { isMobile } from '../mobile';
+import Layout from './Layout'
+import { isMobile } from '../mobile'
 
 function Dashboard(props) {
 
@@ -176,7 +176,7 @@ const Styles = ({
         justifyContent: 'center',
         alignItems: 'center',
         padding: '0px',
-        height: '800px',
+        height: 'auto',
         backgroundColor: '#F5F5F5',
         backgroundImage: `url(${Background})`,
         backgroundSize: 'cover'
