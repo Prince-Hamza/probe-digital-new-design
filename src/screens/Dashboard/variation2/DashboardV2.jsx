@@ -13,7 +13,10 @@ import toggleBlue from '../../../images/dashboard/toggleBlue.png'
 import arrowBlue from '../../../images/dashboard/arrowBlue.png'
 import toggle from '../../../images/dashboard/toggle.png'
 import arrow from '../../../images/dashboard/arrow.png'
-import { AppContext } from '../../../Context';
+import { AppContext } from '../../../Context'
+import menu from '../../../images/menu.png'
+import '../mobile.css'
+import { isMobile } from '../mobile';
 
 function Dashboard(props) {
 
@@ -28,14 +31,37 @@ function Dashboard(props) {
     const toggleSidebar = () => {
         appInfo.sideBarExpanded = appInfo.sideBarExpanded ? false : true
         setAppInfo({ ...appInfo })
+        if (isMobile()) {
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'block'
+            document.getElementsByClassName('sidebarInner').item(0).style.display = 'none'
+            document.getElementsByClassName('sidebar').item(0).style.height = '100px'
+
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'block'
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.height = '100px'
+
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.padding = '0px'
+
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'flex'
+
+
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.flexDirection = 'row'
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.justifyContent = 'center'
+            document.getElementsByClassName('sideBarInnerMobile').item(0).style.alignItems = 'center'
+        }
+    }
+
+    const toggleMenuBarDisplay = () => {
+        document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'none'
+        document.getElementsByClassName('sidebarInner').item(0).style.display = 'block'
+        document.getElementsByClassName('sidebar').item(0).style.height = '800px'
     }
 
     return (
         <Col lg={12}>
             <Row style={Styles.container} >
-                <Col lg={appInfo.sideBarExpanded ? 2 : 1} xs={12} style={{ ...Styles.sideBar }}>
+                <Col lg={appInfo.sideBarExpanded ? 2 : 1} xs={12} style={Styles.sideBar} className={'sidebar'}>
 
-                    <div style={Styles.sideBarInner} >
+                    <div className={'sidebarInner'} style={Styles.sideBarInner} >
 
                         <Image src={logo} style={Styles.logo} />
 
@@ -60,21 +86,30 @@ function Dashboard(props) {
                                 {appInfo.sideBarExpanded && <div style={Styles.itemText} > Person to Person</div>}
                             </div>
                         </Row>
-
                         <Row style={Styles.sideBarItem} onClick={() => { setSelected(3) }} >
                             <div style={selected === 3 ? itemWrapper : itemWrapperVoid}>
                                 <Image src={personToPerson} style={Styles.sidebarItemIcon} />
                                 {appInfo.sideBarExpanded && <div style={Styles.itemText}> Person to Company </div>}
                             </div>
                         </Row>
-
                     </div>
+
+
+                    <div className={'sideBarInnerMobile'} >
+                        <Col xs={1}>
+                            <Image src={menu} style={{ width: '35px', height: '35px', marginLeft: '10px' }} onClick={() => { toggleMenuBarDisplay() }} />
+                        </Col>
+                        <Col xs={11} style={{ ...Content.colCentrify, cursor: 'pointer' }} >
+                            <Image src={logo} style={{ ...Styles.logo, marginTop: '20px' }} />
+                        </Col>
+                    </div>
+
 
                 </Col>
 
 
                 <Col lg={appInfo.sideBarExpanded ? 10 : 11} xs={12} style={Styles.column}>
-                    
+
                 </Col>
 
 
@@ -93,12 +128,7 @@ const Styles = ({
     },
     sideBar: {
         ...Content.colTopCenter,
-        height: window.screen.height,
-        padding: '0px',
-        textAlign: 'left',
-        position: 'relative',
-        backgroundImage: `url(${Gradient})`,
-        // border: 'solid 1px'
+        backgroundImage: `url(${Gradient})`
     },
     textWrap: {
         //marginLeft: '10px',
@@ -141,7 +171,7 @@ const Styles = ({
         height: '800px',
         backgroundColor: '#F5F5F5',
         backgroundImage: `url(${Background})`,
-        backgroundSize:'cover'
+        backgroundSize: 'cover'
     },
     logo: {
         marginLeft: '8%',
