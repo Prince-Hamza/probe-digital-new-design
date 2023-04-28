@@ -57,7 +57,7 @@ function Layout(props) {
                 </Row>
 
 
-                <Col lg={12} xs={12} style={{ padding: '0px' }} >
+                <Col lg={12} xs={12} style={{ padding: '10px' }} >
 
                     {tableInfo.map((item) => {
                         return (
@@ -152,7 +152,7 @@ const Styles = ({
         backgroundColor: 'white',
         padding: '0px',
         border: '1px solid #E9E9E9',
-
+       
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',

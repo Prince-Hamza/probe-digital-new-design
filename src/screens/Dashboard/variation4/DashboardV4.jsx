@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react';
-import { Col, Row, Image } from 'react-bootstrap';
-import { themeStyles } from '../../../styles/theme';
+import React, { useContext, useState } from 'react'
+import { Col, Row, Image } from 'react-bootstrap'
+import { themeStyles } from '../../../styles/theme'
 import Gradient from '../../../images/dashboard/LeftBarGradient.png'
-import { Content } from '../../../styles/styles';
 import logo from '../../../images/logo.png'
 import Background from '../../../images/dashboard/dashTheme.png'
 import personToPerson from '../../../images/dashboard/p2p.png'
@@ -15,7 +14,9 @@ import toggle from '../../../images/dashboard/toggle.png'
 import arrow from '../../../images/dashboard/arrow.png'
 import { AppContext } from '../../../Context'
 import menu from '../../../images/menu.png'
-import { isMobile } from '../mobile';
+import Layout from './Layout'
+import { isMobile } from '../mobile'
+import {Content} from '../../../styles/styles'
 
 function Dashboard(props) {
 
@@ -50,6 +51,7 @@ function Dashboard(props) {
     }
 
 
+    
     const toggleMenuBarDisplay = () => {
         document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'none'
         document.getElementsByClassName('sidebarInner').item(0).style.display = 'block'
@@ -57,10 +59,10 @@ function Dashboard(props) {
     }
 
 
-
     return (
         <Col lg={12}>
-            <Row style={Styles.container} >
+            <Row style={Styles.container}>
+                
                 <Col lg={appInfo.sideBarExpanded ? 2 : 1} xs={12} style={Styles.sideBar} className={'sidebar'}>
 
                     <div className={'sidebarInner'} style={Styles.sideBarInner} >
@@ -99,7 +101,7 @@ function Dashboard(props) {
                     </div>
 
 
-
+                    
 
                     <div className={'sideBarInnerMobile'} onClick={() => { toggleMenuBarDisplay() }} >
                         <Col xs={1} >
@@ -115,7 +117,7 @@ function Dashboard(props) {
 
 
                 <Col lg={appInfo.sideBarExpanded ? 10 : 11} xs={12} style={Styles.column}>
-                    <Image src={illus} style={{ width: '300px', height: '300px' }} />
+                    <Layout />
                 </Col>
 
 
@@ -125,6 +127,7 @@ function Dashboard(props) {
 }
 
 export default Dashboard
+
 
 
 const Styles = ({
@@ -174,10 +177,10 @@ const Styles = ({
         justifyContent: 'center',
         alignItems: 'center',
         padding: '0px',
-        height: '800px',
+        height: 'auto',
         backgroundColor: '#F5F5F5',
-        backgroundImage: `url(${Background})`,
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        ...Content.colTopLeft
     },
     logo: {
         marginLeft: '8%',

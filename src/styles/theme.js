@@ -58,6 +58,17 @@ export const themeStyles = ({
         lineHeight: '30px',
         color: '#021B41'
     },
+    smallText: {
+        fontFamily: 'Poppins',
+        fontSize: '12px',
+        fontWeight: '500',
+        lineHeight: '16px',
+        letterSpacing: '0px',
+        textAlign: 'left'
+    },
+    smallText2:{
+
+    },
     footerText: {
         fontFamily: 'Poppins',
         fontStyle: 'normal',
@@ -114,7 +125,7 @@ export const themeStyles = ({
         color: '#212529',
         textAlign: 'center'
     },
-    tableText:{
+    tableText: {
         fontFamily: 'Poppins',
         fontStyle: 'normal',
         fontWeight: 500,
