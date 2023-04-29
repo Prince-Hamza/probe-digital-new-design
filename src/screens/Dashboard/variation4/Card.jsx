@@ -5,7 +5,7 @@ import { themeStyles } from '../../../styles/theme';
 import uk from '../../../images/dashboard/uk.png'
 import tick from '../../../images/dashboard/tick.png'
 import cross from '../../../images/dashboard/cross.png'
-
+import './mobile.css'
 
 function Card(props) {
     return (
@@ -23,8 +23,8 @@ function Card(props) {
                 return (
                     <Row  className={'cardRow'} >
 
-                        <Col lg={4} xs={12} style={{ ...Content.rowLeftStart, padding:'0px'}}>
-                            <div style={{ width: '25%', ...themeStyles.smallText2 , }}> Hubble Ltd </div>
+                        <Col lg={4} xs={12} className={'hubbleWrap'}>
+                            <div  className={'hubbleText'} > Hubble Ltd </div>
                         </Col>
 
 
