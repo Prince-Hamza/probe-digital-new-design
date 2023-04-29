@@ -24,7 +24,13 @@
 
 @media (max-width:500px) {
     .mainTitle {
-        font: 2rem poppins;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 80px;
+        margin-left: 15px;
+        margin-bottom: 25px;
         color: white;
         margin-left: 15px;
         margin-bottom: 25px;

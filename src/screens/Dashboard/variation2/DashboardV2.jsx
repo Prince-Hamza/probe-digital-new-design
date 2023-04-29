@@ -16,7 +16,7 @@ import arrow from '../../../images/dashboard/arrow.png'
 import { AppContext } from '../../../Context'
 import menu from '../../../images/menu.png'
 import '../mobile.css'
-import { isMobile } from '../mobile';
+import { onMobile } from '../mobile';
 
 function Dashboard(props) {
 
@@ -31,7 +31,7 @@ function Dashboard(props) {
     const toggleSidebar = () => {
         appInfo.sideBarExpanded = appInfo.sideBarExpanded ? false : true
         setAppInfo({ ...appInfo })
-        if (isMobile()) {
+        if (onMobile()) {
             document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'block'
             document.getElementsByClassName('sidebarInner').item(0).style.display = 'none'
             document.getElementsByClassName('sidebar').item(0).style.height = '100px'

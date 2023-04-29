@@ -8,20 +8,15 @@ import ResultLine from '../../../images/dashboard/ExportLine.png'
 import { headings } from '../../../info/dashVariation3Headings'
 import tableInfo from '../../../info/tableInfo.json'
 import './mobile.css'
+import Header from '../components/Header';
 
 function Layout(props) {
 
     return (
         <Col lg={12}>
 
-            <Row lg={12} xs={12} style={Styles.header} >
-                <Col lg={6} xs={6} style={{ ...Content.colTopLeft, }} >
-                    <p style={{ ...themeStyles.heading1, color: '#222', marginLeft: '15px' }}> Dashboard </p>
-                </Col>
-                <Col lg={6} xs={6} style={Content.rowCenterEnd}>
-                    <Image style={{ cursor: 'pointer' }} src={HiFrame} />
-                </Col>
-            </Row>
+
+            <Header />
 
             <br />
 
@@ -31,7 +26,7 @@ function Layout(props) {
                 <Row style={Styles.filtersWrap}>
                     <Col lg={6} xs={12}  >
                         <Row style={{ width: '100%' }} >
-                            <div style={{ width: '160px', marginTop: '9px' }} >
+                            <div style={{ width: '160px', marginTop: '9px', ...themeStyles.heading3 }} >
                                 First Name
                             </div>
                             <input style={Styles.filterInput} value={'James'} />
@@ -40,7 +35,7 @@ function Layout(props) {
 
                     <Col lg={6} xs={12} >
                         <Row style={{ width: '100%' }} >
-                            <div style={{ width: '160px', marginTop: '9px' }} >
+                            <div style={{ width: '160px', marginTop: '9px', ...themeStyles.heading3 }} >
                                 Surname
                             </div>
                             <input style={Styles.filterInput} value={'Smithson'} />
@@ -114,12 +109,7 @@ export default Layout
 
 
 const Styles = ({
-    header: {
-        height: 'auto',
-        backgroundColor: 'white',
-        ...Content.rowSpaceBetween,
-        padding: '0px'
-    },
+    
     filtersWrap: {
         background: '#FFFFFF',
         borderRadius: '10px',
@@ -134,10 +124,10 @@ const Styles = ({
         height: '40px',
         border: '1px solid #E9E9E9',
         bordeRadius: '8px',
-        outline: 'none'
+        outline: 'none',
+        ...themeStyles.smallText
     },
     filterText: {
-        ...themeStyles.heading3,
         width: '120px'
     },
     pageRemain: {
@@ -152,7 +142,7 @@ const Styles = ({
         backgroundColor: 'white',
         padding: '0px',
         border: '1px solid #E9E9E9',
-       
+
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',

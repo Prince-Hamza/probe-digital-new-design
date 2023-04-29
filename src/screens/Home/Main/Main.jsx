@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Col } from "react-bootstrap"
 import NavBar from '../Navbar/Navbar'
 import AppFace from '../AppFace/AppFace'
@@ -12,15 +12,8 @@ import Goal from '../Goal/Goal'
 import Enhance from '../Enhance/Enhance'
 import Copyright from '../CopyRight/CopyRight'
 import Footer from '../Footer/Footer'
-import { useNavigate } from 'react-router-dom'
 
 export default function Main() {
-
-    const navigate = useNavigate()
-
-    // useEffect(() => {
-    //     navigate('/dashboard')
-    // })
 
     return (
         <Col lg={12} md={12} xs={12}>

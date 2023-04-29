@@ -145,7 +145,12 @@ const Styles = ({
     brandText: {
         color: 'white',
         width: '40%',
-        textAlign: 'left'
+        textAlign: 'left',
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 500,
+        fontSize: '16px',
+        lineHeight: '24px',
         // border: 'solid 1px'
     },
     trustText: {

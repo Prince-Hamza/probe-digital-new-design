@@ -1,13 +1,10 @@
 import React, { useContext, useState } from 'react'
 import { Col, Row, Image } from 'react-bootstrap'
-import { themeStyles } from '../../../styles/theme'
 import Gradient from '../../../images/dashboard/LeftBarGradient.png'
 import logo from '../../../images/logo.png'
-import Background from '../../../images/dashboard/dashTheme.png'
 import personToPerson from '../../../images/dashboard/p2p.png'
 import searchOnPerson from '../../../images/dashboard/sop.png'
 import personToCompany from '../../../images/dashboard/p2c.png'
-import illus from '../../../images/dashboard/data-illustration.png'
 import toggleBlue from '../../../images/dashboard/toggleBlue.png'
 import arrowBlue from '../../../images/dashboard/arrowBlue.png'
 import toggle from '../../../images/dashboard/toggle.png'
@@ -15,8 +12,8 @@ import arrow from '../../../images/dashboard/arrow.png'
 import { AppContext } from '../../../Context'
 import menu from '../../../images/menu.png'
 import Layout from './Layout'
-import { isMobile } from '../mobile'
-import {Content} from '../../../styles/styles'
+import { onMobile } from '../mobile'
+import { Content } from '../../../styles/styles'
 
 function Dashboard(props) {
 
@@ -29,9 +26,13 @@ function Dashboard(props) {
 
 
     const toggleSidebar = () => {
+
+
         appInfo.sideBarExpanded = appInfo.sideBarExpanded ? false : true
         setAppInfo({ ...appInfo })
-        if (isMobile()) {
+
+
+        if (onMobile()) {
             document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'block'
             document.getElementsByClassName('sidebarInner').item(0).style.display = 'none'
             document.getElementsByClassName('sidebar').item(0).style.height = '100px'
@@ -51,7 +52,7 @@ function Dashboard(props) {
     }
 
 
-    
+
     const toggleMenuBarDisplay = () => {
         document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'none'
         document.getElementsByClassName('sidebarInner').item(0).style.display = 'block'
@@ -62,7 +63,7 @@ function Dashboard(props) {
     return (
         <Col lg={12}>
             <Row style={Styles.container}>
-                
+
                 <Col lg={appInfo.sideBarExpanded ? 2 : 1} xs={12} style={Styles.sideBar} className={'sidebar'}>
 
                     <div className={'sidebarInner'} style={Styles.sideBarInner} >
@@ -101,7 +102,7 @@ function Dashboard(props) {
                     </div>
 
 
-                    
+
 
                     <div className={'sideBarInnerMobile'} onClick={() => { toggleMenuBarDisplay() }} >
                         <Col xs={1} >

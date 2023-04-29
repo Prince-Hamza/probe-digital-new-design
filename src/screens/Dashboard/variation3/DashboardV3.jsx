@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { Col, Row, Image } from 'react-bootstrap'
 import { themeStyles } from '../../../styles/theme'
 import Gradient from '../../../images/dashboard/LeftBarGradient.png'
-import Content from './Layout'
 import logo from '../../../images/logo.png'
 import Background from '../../../images/dashboard/dashTheme.png'
 import personToPerson from '../../../images/dashboard/p2p.png'
@@ -16,7 +15,8 @@ import arrow from '../../../images/dashboard/arrow.png'
 import { AppContext } from '../../../Context'
 import menu from '../../../images/menu.png'
 import Layout from './Layout'
-import { isMobile } from '../mobile'
+import { onMobile } from '../mobile'
+import { Content } from '../../../styles/styles'
 
 function Dashboard(props) {
 
@@ -29,9 +29,13 @@ function Dashboard(props) {
 
 
     const toggleSidebar = () => {
+
+
         appInfo.sideBarExpanded = appInfo.sideBarExpanded ? false : true
         setAppInfo({ ...appInfo })
-        if (isMobile()) {
+
+
+        if (onMobile()) {
             document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'block'
             document.getElementsByClassName('sidebarInner').item(0).style.display = 'none'
             document.getElementsByClassName('sidebar').item(0).style.height = '100px'
@@ -49,7 +53,6 @@ function Dashboard(props) {
             document.getElementsByClassName('sideBarInnerMobile').item(0).style.alignItems = 'center'
         }
     }
-
 
     
     const toggleMenuBarDisplay = () => {

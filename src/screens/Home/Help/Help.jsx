@@ -10,7 +10,7 @@ function Help() {
     return (
         <Row style={{ ...themeStyles.container, marginBottom: '150px' }}>
             <span style={{ marginBottom: '50px' }} />
-            <Row style={themeStyles.sectionTitle}> Who We Help </Row>
+            <Row style={{ ...themeStyles.sectionTitle, marginLeft: '0px' }}> Who We Help </Row>
 
             <Col lg={12} xs={12}>
                 <Image className='underline' src={underline} />

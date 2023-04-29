@@ -61,13 +61,25 @@ export const themeStyles = ({
     smallText: {
         fontFamily: 'Poppins',
         fontSize: '12px',
-        fontWeight: '500',
+        fontWeight: 500,
         lineHeight: '16px',
         letterSpacing: '0px',
         textAlign: 'left'
     },
-    smallText2:{
-
+    smallText2: {
+        fontFamily: 'Poppins',
+        fontSize: '16px',
+        fontWeight: 500,
+        lineHeight: '20px',
+        letterSpacing: '0px',
+        textAlign: 'left'
+    },
+    smallText3: {
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: 500,
+        fontSize: '14px',
+        lineHeight: '18px',
     },
     footerText: {
         fontFamily: 'Poppins',

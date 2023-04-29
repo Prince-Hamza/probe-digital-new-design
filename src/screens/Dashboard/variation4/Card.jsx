@@ -3,6 +3,8 @@ import { Col, Image, Row } from 'react-bootstrap'
 import { Content } from '../../../styles/styles';
 import { themeStyles } from '../../../styles/theme';
 import uk from '../../../images/dashboard/uk.png'
+import tick from '../../../images/dashboard/tick.png'
+import cross from '../../../images/dashboard/cross.png'
 
 
 function Card(props) {
@@ -21,8 +23,8 @@ function Card(props) {
                 return (
                     <Row  className={'cardRow'} >
 
-                        <Col lg={4} xs={12}>
-                            <div style={{ width: '100%', ...themeStyles.smallText2 }} > Hubble Ltd </div>
+                        <Col lg={4} xs={12} style={{ ...Content.rowLeftStart, padding:'0px'}}>
+                            <div style={{ width: '25%', ...themeStyles.smallText2 , }}> Hubble Ltd </div>
                         </Col>
 
 
@@ -36,7 +38,7 @@ function Card(props) {
 
                         <Col lg={2} xs={12} style={Styles.cardRowCellCol}>
                             <Row style={Styles.cardRowCellColRow} >
-                                <Image src={uk} style={{ width: '40px', height: '16px' }} />
+                                <Image src={tick} style={{ width: '40px', height: '16px' }} />
                                 <div style={{ ...themeStyles.smallText, width: '20px' }} > Yes </div>
                             </Row>
                         </Col>
@@ -45,8 +47,8 @@ function Card(props) {
 
                         <Col lg={2} xs={12} style={Styles.cardRowCellCol}>
                             <Row style={Styles.cardRowCellColRow} >
-                                <Image src={uk} style={{ width: '40px', height: '16px' }} />
-                                <div style={{ ...themeStyles.smallText, width: '20px' }} > Yes </div>
+                                <Image src={cross} style={{ width: '40px', height: '16px' }} />
+                                <div style={{ ...themeStyles.smallText, width: '20px' }} > No </div>
                             </Row>
                         </Col>
 
