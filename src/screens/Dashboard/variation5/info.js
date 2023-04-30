@@ -4,6 +4,7 @@ import uk from '../../../images/dashboard/uk.png'
 
 export const info = ({
     card1: {
+        mainTitle: 'Company Info',
         headings: [
             {
                 title: 'Company Name',
@@ -113,6 +114,8 @@ export const info = ({
     },
 
     card2: {
+        mainTitle: 'Legal Info',
+
         headings: [
             {
                 title: 'Legal Orders',
@@ -177,7 +180,148 @@ export const info = ({
 
         ]
 
-    }
+    },
+
+    card3: {
+
+        mainTitle: 'Assets Info',
+
+        headings: [
+            {
+                title: 'Assets',
+                lg: 4,
+            },
+
+        ],
+
+        rows: [
+            {
+                items: [
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                ]
+            },
+            {
+                items: [
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                ]
+            },
+            {
+                items: [
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                ]
+            },
+            {
+                items: [
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                    {
+                        text: '',
+                        lg: 4
+                    },
+                ]
+            },
+        ]
+
+    },
+
+
+    card4: {
+
+        mainTitle: 'Company Info',
+
+        headings: [
+            {
+                title: 'List Names',
+                lg: 4,
+            },
+            {
+                title: 'Charges',
+                lg: 4
+            }
+        ],
+
+        rows: [
+
+            {
+                items: [
+                    {
+                        text: 'United Nations Sanctions List',
+                        lg: 4
+                    },
+                    {
+                        image: tick,
+                        lg: 4
+                    },
+                ]
+            },
+            {
+                items: [
+                    {
+                        text: 'Subject to Financial Sanctions',
+                        lg: 4
+                    },
+                    {
+                        image: cross,
+                        lg: 4
+                    },
+                ]
+            },
+            {
+                items: [
+                    {
+                        text: 'Financial Services Register',
+                        lg: 4
+                    },
+                    {
+                        image: tick,
+                        lg: 4
+                    },
+                ]
+            },
+
+            {
+                items: [
+                    {
+                        text: 'Insolvency Register',
+                        lg: 4
+                    },
+                    {
+                        image: cross,
+                        lg: 4
+                    },
+                ]
+            },
+
+
+
+
+        ]
+
+    },
+
 
 
 })

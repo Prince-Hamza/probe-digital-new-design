@@ -66,6 +66,14 @@ export const themeStyles = ({
         letterSpacing: '0em',
         textAlign: 'center'
     },
+    heading5: {
+        fontFamily: 'Poppins',
+        fontSize: '20px',
+        fontWeight: 500,
+        lineHeight: '24px',
+        letterSpacing: '0em',
+        textAlign: 'left'
+    },
     smallText: {
         fontFamily: 'Poppins',
         fontSize: '12px',
