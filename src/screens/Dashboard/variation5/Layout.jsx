@@ -81,8 +81,8 @@ function Layout(props) {
                 <Row style={{ width: '100%', padding: '10px' }}>
                     <Card info={info.card1} />
                     <Card info={info.card2} />
-                    <Card />
-                    <Card />
+                    <Card info={info.card3} />
+                    <Card info={info.card4} />
                 </Row>
 
 

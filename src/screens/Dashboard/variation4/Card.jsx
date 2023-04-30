@@ -21,10 +21,10 @@ function Card(props) {
 
             {[1, 2, 3, 4].map(() => {
                 return (
-                    <Row  className={'cardRow'} >
+                    <Row className={'cardRow'} >
 
-                        <Col lg={4} xs={12} className={'hubbleWrap'}>
-                            <div  className={'hubbleText'} > Hubble Ltd </div>
+                        <Col lg={4} xs={12} style={{ padding: '0px' }} className={'hubbleWrap'}>
+                            <div className={'hubbleText'}> Hubble Ltd </div>
                         </Col>
 
 
@@ -127,22 +127,22 @@ const Styles = ({
         paddingTop: '0px',
         height: 'auto',
         background: 'linear-gradient(90deg, rgba(0,188,175,1) 0%, rgba(1,152,188,1) 100%)',
-        marginRight:'25px',
-        marginBottom:'25px',
+        marginRight: '25px',
+        marginBottom: '25px',
         ...Content.colTopCenter
     },
     cardHead: {
         width: '100%',
         height: '50px',
         padding: '0px',
-        boxShadow:'0px 0px 5px 1px lightgray',
+        boxShadow: '0px 0px 5px 1px lightgray',
         ...Content.rowSpaceBetween
     },
     cardRow: {
         width: '100%',
         height: '50px',
-       // border: 'solid 1px lightgray',
-        boxShadow:'0px 0px 5px 1px lightgray',
+        // border: 'solid 1px lightgray',
+        boxShadow: '0px 0px 5px 1px lightgray',
         backgroundColor: 'white',
         ...Content.rowCentrify
     },

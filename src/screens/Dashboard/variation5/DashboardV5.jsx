@@ -27,10 +27,8 @@ function Dashboard(props) {
 
     const toggleSidebar = () => {
 
-
         appInfo.sideBarExpanded = appInfo.sideBarExpanded ? false : true
         setAppInfo({ ...appInfo })
-
 
         if (onMobile()) {
             document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'block'
