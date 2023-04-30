@@ -37,8 +37,6 @@ function Card({ info }) {
             {info.rows.map((row) => {
                 return (
                     <Row className={'cardRow'} >
-
-
                         {row.items.map((item, index) => {
                             if (!item.image) {
                                 return (
@@ -57,36 +55,6 @@ function Card({ info }) {
                                 )
                             }
                         })}
-
-                        {/* 
-                        <Col lg={4} xs={12} className={'hubbleWrap'}>
-                            <div className={'hubbleText'} > Hubble Ltd </div>
-                        </Col>
-
-
-                        <Col lg={4} xs={12} style={Styles.cardRowCellCol}>
-                            <Row style={Styles.cardRowCellColRow} >
-                                <Image src={uk} style={{ width: '40px', height: '15px' }} />
-                                <div style={{ ...themeStyles.smallText, width: '120px' }} > United Kingdom </div>
-                            </Row>
-                        </Col>
-
-
-                        <Col lg={2} xs={12} style={Styles.cardRowCellCol}>
-                            <Row style={Styles.cardRowCellColRow} >
-                                <Image src={tick} style={{ width: '40px', height: '16px' }} />
-                                <div style={{ ...themeStyles.smallText, width: '20px' }} > Yes </div>
-                            </Row>
-                        </Col>
-
-
-
-                        <Col lg={2} xs={12} style={Styles.cardRowCellCol}>
-                            <Row style={Styles.cardRowCellColRow} >
-                                <Image src={cross} style={{ width: '40px', height: '16px' }} />
-                                <div style={{ ...themeStyles.smallText, width: '20px' }} > No </div>
-                            </Row>
-                        </Col> */}
 
                     </Row>
 
