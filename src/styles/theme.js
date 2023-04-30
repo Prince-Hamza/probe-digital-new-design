@@ -58,6 +58,14 @@ export const themeStyles = ({
         lineHeight: '30px',
         color: '#021B41'
     },
+    heading4: {
+        fontFamily: 'Poppins',
+        fontSize: '32px',
+        fontWeight: 600,
+        lineHeight: '24px',
+        letterSpacing: '0em',
+        textAlign: 'center'
+    },
     smallText: {
         fontFamily: 'Poppins',
         fontSize: '12px',

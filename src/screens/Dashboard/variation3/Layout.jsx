@@ -17,9 +17,7 @@ function Layout(props) {
 
 
             <Header />
-
             <br />
-
 
             <Col lg={12} xs={12} style={Styles.pageRemain}>
 
@@ -53,7 +51,6 @@ function Layout(props) {
 
 
                 <Col lg={12} xs={12} style={{ padding: '10px' }} >
-
                     {tableInfo.map((item) => {
                         return (
                             <Row className={'tableDataWrap'} >
@@ -102,7 +99,7 @@ function Layout(props) {
             </Col>
 
         </Col>
-    );
+    )
 }
 
 export default Layout
@@ -134,7 +131,6 @@ const Styles = ({
         padding: '10px',
         height: 'auto',
         ...Content.colCenterLeft
-        // border: 'solid 1px'
     },
     bar: {
         width: '100%',
@@ -155,7 +151,6 @@ const Styles = ({
         height: '22px'
     },
     headingItem: {
-        // border: 'solid 1px',
         marginLeft: '10px',
         marginRight: '10px',
         ...Content.rowCentrify

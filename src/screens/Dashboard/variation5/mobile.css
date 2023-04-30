@@ -1,0 +1,119 @@
+.tableDataWrap {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #E9E9E9;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    /* border: solid 1px */
+}
+
+
+.cardRow {
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 0px 5px 1px lightgray;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHeadRow {
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 0px 5px 1px lightgray;
+    background-color: whitesmoke;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subHeader {
+    box-shadow: 0px 0px 5px 1px lightgray;
+    background-color: white;
+    width: 99.9%;
+    margin-bottom: 25px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+
+.hubbleWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px
+}
+
+
+.hubbleText {
+    width: 55%;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left
+}
+
+@media (max-width:500px) {
+    .tableDataWrap {
+        width: 100%;
+        height: 650px;
+        background-color: white;
+        padding: 35px;
+        border: 1px solid #E9E9E9;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 0px;
+        margin-bottom: 2px;
+        border-radius: 10px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .cardRow {
+        height: 150px;
+        padding: 15px;
+    }
+
+    .subHeader {
+        height: 400px;
+    }
+
+    .hubbleWrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px;
+    }
+
+    .hubbleText {
+        width: 25%;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-left: 0px;
+
+    }
+
+}

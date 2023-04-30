@@ -8,7 +8,7 @@ function Header(props) {
 
         <Row lg={12} xs={12} style={Styles.header} >
             <Col lg={6} xs={6} style={Styles.firstHalf}>
-                <div style={{ ...themeStyles.heading1, color: '#222', marginLeft: '15px' }}> Dashboard </div>
+                <div style={{ ...themeStyles.heading4, color: '#222', marginLeft: '15px' }}> Dashboard </div>
             </Col>
             <Col lg={6} xs={6} style={Styles.secondHalf}>
                 <Row style={{ ...Styles.secondHalfRow, width: '100%' }} >
@@ -27,7 +27,7 @@ export default Header
 
 const Styles = ({
     header: {
-        height: 'auto',
+        height: '80px',
         backgroundColor: 'white',
         padding: '5px',
         ...Content.rowSpaceBetween,
@@ -50,7 +50,12 @@ const Styles = ({
     },
     text: {
         width: '150px',
-        ...themeStyles.footerText,
+        fontFamily: 'Poppins',
+        fontSize: '16px',
+        fontWeight: 600,
+        lineHeight: '24px',
+        letterSpacing: '0em',
+        textAlign: 'center'
     },
     sphere: {
         width: '35px',
