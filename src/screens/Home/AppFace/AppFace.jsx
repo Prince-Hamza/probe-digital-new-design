@@ -171,7 +171,7 @@ const Styles = ({
         // ...Content.colCenterLeft
     },
     button: {
-        width: '202px',
+        width: '230px',
         height: '48px',
         backgroundColor: palleteV1.green,
         ...themeStyles.heading3

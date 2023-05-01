@@ -23,8 +23,8 @@ function Dashboard(props) {
     const [selected, setSelected] = useState(1)
 
     const { appInfo, setAppInfo } = useContext(AppContext)
-    const itemWrapper = appInfo.sideBarExpanded ? { ...Styles.textWrap, width: '95%', justifyContent: 'flex-start' } : { ...Styles.textWrap, width: '70%', justifyContent: 'center' }
-    const itemWrapperVoid = appInfo.sideBarExpanded ? { ...Styles.textWrapVoid, width: '95%', justifyContent: 'flex-start' } : { ...Styles.textWrapVoid, width: '70%', justifyContent: 'center' }
+    const itemWrapper = appInfo.sideBarExpanded ? { ...Styles.textWrap, width: '99%', justifyContent: 'flex-start' } : { ...Styles.textWrap, width: '70%', justifyContent: 'center' }
+    const itemWrapperVoid = appInfo.sideBarExpanded ? { ...Styles.textWrapVoid, width: '99%', justifyContent: 'flex-start' } : { ...Styles.textWrapVoid, width: '70%', justifyContent: 'center' }
 
 
 
@@ -54,7 +54,7 @@ function Dashboard(props) {
         }
     }
 
-    
+
     const toggleMenuBarDisplay = () => {
         document.getElementsByClassName('sideBarInnerMobile').item(0).style.display = 'none'
         document.getElementsByClassName('sidebarInner').item(0).style.display = 'block'
@@ -103,7 +103,7 @@ function Dashboard(props) {
                     </div>
 
 
-                    
+
 
                     <div className={'sideBarInnerMobile'} onClick={() => { toggleMenuBarDisplay() }} >
                         <Col xs={1} >
@@ -121,7 +121,6 @@ function Dashboard(props) {
                 <Col lg={appInfo.sideBarExpanded ? 10 : 11} xs={12} style={Styles.column}>
                     <Layout />
                 </Col>
-
 
             </Row >
         </Col >
@@ -146,7 +145,7 @@ const Styles = ({
         background: 'rgba(255, 255, 255, 0.25)',
         borderRadius: '5px',
         marginBottom: '15px',
-        width: '95%',
+        width: '99%',
         height: '40px',
 
         display: 'flex',
@@ -164,7 +163,7 @@ const Styles = ({
     },
 
     sideBarInner: {
-        padding: '10px',
+        padding: '5px',
     },
 
     sideBarGradient: {
@@ -200,13 +199,12 @@ const Styles = ({
     itemText: {
         fontFamily: 'Poppins',
         fontSize: '16px',
-        fontWeight: 500,
+        fontWeight: 400,
         lineHeight: '24px',
-        letterSpacing: '0em',
-        textAlign: 'center',
+        textAlign: 'left',
         color: 'white',
         cursor: 'pointer',
-        marginLeft: '10px'
+        marginLeft: '5px'
     },
     textWrapVoid: {
         marginBottom: '15px',

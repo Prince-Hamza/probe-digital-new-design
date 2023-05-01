@@ -20,8 +20,8 @@ function Dashboard(props) {
     const [selected, setSelected] = useState(1)
 
     const { appInfo, setAppInfo } = useContext(AppContext)
-    const itemWrapper = appInfo.sideBarExpanded ? { ...Styles.textWrap, width: '95%', justifyContent: 'flex-start' } : { ...Styles.textWrap, width: '70%', justifyContent: 'center' }
-    const itemWrapperVoid = appInfo.sideBarExpanded ? { ...Styles.textWrapVoid, width: '95%', justifyContent: 'flex-start' } : { ...Styles.textWrapVoid, width: '70%', justifyContent: 'center' }
+    const itemWrapper = appInfo.sideBarExpanded ? { ...Styles.textWrap, width: '99%', justifyContent: 'flex-start' } : { ...Styles.textWrap, width: '70%', justifyContent: 'center' }
+    const itemWrapperVoid = appInfo.sideBarExpanded ? { ...Styles.textWrapVoid, width: '99%', justifyContent: 'flex-start' } : { ...Styles.textWrapVoid, width: '70%', justifyContent: 'center' }
 
 
 
@@ -164,7 +164,7 @@ const Styles = ({
     },
 
     sideBarInner: {
-        padding: '10px',
+        padding: '5px',
     },
 
     sideBarGradient: {
@@ -200,13 +200,13 @@ const Styles = ({
     itemText: {
         fontFamily: 'Poppins',
         fontSize: '16px',
-        fontWeight: 500,
+        fontWeight: 400,
         lineHeight: '24px',
         letterSpacing: '0em',
-        textAlign: 'center',
+        textAlign: 'left',
         color: 'white',
         cursor: 'pointer',
-        marginLeft: '10px'
+        marginLeft: '5px'
     },
     textWrapVoid: {
         marginBottom: '15px',

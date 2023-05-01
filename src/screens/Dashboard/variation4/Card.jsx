@@ -6,6 +6,7 @@ import uk from '../../../images/dashboard/uk.png'
 import tick from '../../../images/dashboard/tick.png'
 import cross from '../../../images/dashboard/cross.png'
 import './mobile.css'
+import { onMobile } from '../mobile';
 
 function Card(props) {
     return (
@@ -23,7 +24,7 @@ function Card(props) {
                 return (
                     <Row className={'cardRow'} >
 
-                        <Col lg={4} xs={12} style={{ padding: '0px' }} className={'hubbleWrap'}>
+                        <Col lg={4} xs={12} style={{ padding: onMobile() ? '0px' : '5px' }} className={'hubbleWrap'}>
                             <div className={'hubbleText'}> Hubble Ltd </div>
                         </Col>
 
