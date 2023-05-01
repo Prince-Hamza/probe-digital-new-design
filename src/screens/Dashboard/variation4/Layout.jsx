@@ -61,8 +61,8 @@ function Layout(props) {
                             <div style={{ width: '170px', ...themeStyles.tableText }}> 5843 2166 4567 8901 </div>
                         </Row>
                         <Row style={{ width: '100%' }}>
-                            <div style={{ width: '80px', ...themeStyles.smallText, ...Content.rowLeftStart }} > Contact Number </div>
-                            <div style={{ width: '100px', ...themeStyles.tableText }}> 556 london street </div>
+                            <div style={{ width: '120px', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Contact Number </div>
+                            <div style={{ width: '170px', ...themeStyles.tableText }}> 556 london street </div>
                         </Row>
                     </Col>
 

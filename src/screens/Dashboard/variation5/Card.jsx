@@ -26,7 +26,7 @@ function Card({ info }) {
                 <Row className='cardHeadRow' >
                     {info.headings.map((item) => {
                         return (
-                            <Col lg={item.lg} xs={item.lg} >
+                            <Col lg={item.lg} xs={item.xs} >
                                 <div style={Styles.cardHeading} > {item.title} </div>
                             </Col>
                         )
