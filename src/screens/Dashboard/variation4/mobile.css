@@ -33,9 +33,11 @@
     width: 99.9%;
     margin-bottom: 25px;
     height: 80px;
+
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: center
+    align-items: center;
 }
 
 

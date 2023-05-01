@@ -38,15 +38,18 @@
     align-items: center;
 }
 
+
 .subHeader {
     box-shadow: 0px 0px 5px 1px lightgray;
     background-color: white;
     width: 99.9%;
     margin-bottom: 25px;
     height: 80px;
+
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: center
+    align-items: center;
 }
 
 
@@ -55,12 +58,12 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 10px
+    padding: 5px
 }
 
 
 .hubbleText {
-    width: 55%;
+    width: 100%;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 500;
@@ -68,6 +71,7 @@
     letter-spacing: 0px;
     text-align: left
 }
+
 
 @media (max-width:500px) {
     .tableDataWrap {
@@ -105,7 +109,7 @@
     }
 
     .hubbleText {
-        width: 25%;
+        width: 100%;
         font-family: Poppins;
         font-size: 16px;
         font-weight: 500;

@@ -40,7 +40,7 @@ function Card({ info }) {
                             {row.items.map((item, index) => {
                                 if (!item.image) {
                                     return (
-                                        <Col lg={item.lg} xs={12} className={index === 0 ? 'hubbleWrap' : 'x'}>
+                                        <Col lg={item.lg} xs={item.xs} className={index === 0 ? 'hubbleWrap' : 'x'}>
                                             {!item.image && <div className={index === 0 ? 'hubbleText' : 'x'} > {item.text} </div>}
                                         </Col>
                                     )
