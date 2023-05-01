@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Form, Image, Row } from 'react-bootstrap';
 import { Content } from '../../../styles/styles';
 import { themeStyles } from '../../../styles/theme';
@@ -12,6 +12,22 @@ import Header from '../components/Header';
 
 function Layout(props) {
 
+
+    const [selecteds, setSelecteds] = useState([])
+
+    const checkBoxClick = (index) => {
+        // alert(index)
+        // if (selecteds.includes(index)) {
+        //     alert(`splice`)
+        //     selecteds.splice(index, 1)
+        // } else if (!selecteds.includes(index)) {
+        //     alert(`push`)
+        //     selecteds.push(index)
+        // }
+        // alert(`s: ${selecteds}`)
+        // setSelecteds([...selecteds])
+    }
+
     return (
         <Col lg={12}>
 
@@ -24,7 +40,7 @@ function Layout(props) {
                 <Row style={Styles.filtersWrap}>
                     <Col lg={6} xs={12}  >
                         <Row style={{ width: '100%' }} >
-                            <div style={{ width: '160px', marginTop: '9px', ...themeStyles.heading3 }} >
+                            <div style={{ width: '160px', marginTop: '6px', ...themeStyles.heading3 }} >
                                 First Name
                             </div>
                             <input style={Styles.filterInput} value={'James'} />
@@ -33,7 +49,7 @@ function Layout(props) {
 
                     <Col lg={6} xs={12} >
                         <Row style={{ width: '100%' }} >
-                            <div style={{ width: '160px', marginTop: '9px', ...themeStyles.heading3 }} >
+                            <div style={{ width: '160px', marginTop: '6px', ...themeStyles.heading3 }} >
                                 Surname
                             </div>
                             <input style={Styles.filterInput} value={'Smithson'} />
@@ -51,12 +67,12 @@ function Layout(props) {
 
 
                 <Col lg={12} xs={12} style={{ padding: '10px' }} >
-                    {tableInfo.map((item) => {
+                    {tableInfo.map((item, index) => {
                         return (
                             <Row className={'tableDataWrap'} >
 
                                 <Col lg={1} xs={12}  >
-                                    <Form.Control type={'text'} style={{ ...Styles.checkbox, marginRight: '28px' }} />
+                                    <Form.Control type={'checkbox'} checked={true} onClick={() => { checkBoxClick(index) }} style={{ ...Styles.checkbox, marginRight: '28px' }} />
                                 </Col>
 
                                 <Col lg={1} xs={12} style={{ ...Styles.headingItem }}>
@@ -106,7 +122,7 @@ export default Layout
 
 
 const Styles = ({
-    
+
     filtersWrap: {
         background: '#FFFFFF',
         borderRadius: '10px',
@@ -117,7 +133,7 @@ const Styles = ({
         ...Content.rowCentrify
     },
     filterInput: {
-        width: '20%',
+        width: '40%',
         height: '40px',
         border: '1px solid #E9E9E9',
         bordeRadius: '8px',

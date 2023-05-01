@@ -29,53 +29,54 @@ function Layout(props) {
 
                 <Row className={'subHeader'}>
 
-                    <Col lg={2} xs={12} style={{ ...Content.rowLeftStart }} >
+                    <Col lg={2} xs={12} style={{ ...Content.rowLeftStart, width: 'auto' }} >
                         <Image style={{ width: '45px', height: '45px' }} src={man} />
                     </Col>
 
-                    <Col lg={2} xs={12}  >
+                    <Col lg={2} xs={12} style={{ marginRight: '35px' }}>
                         <Row style={{ width: '100%' }}>
-                            <div style={{ width: '90px', ...themeStyles.smallText3, ...Content.rowLeftStart }} > First Name </div>
-                            <div style={{ width: '90px', ...themeStyles.tableText }}> James </div>
+                            <div style={{ width: '60%', ...themeStyles.smallText3, ...Content.rowLeftStart }} > First Name </div>
+                            <div style={{ width: '40%', ...themeStyles.tableText }}> James </div>
                         </Row>
                         <Row style={{ width: '100%' }}>
-                            <div style={{ width: '90px', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Surname </div>
-                            <div style={{ width: '50px', ...themeStyles.tableText }}> Smithson </div>
-                        </Row>
-                    </Col>
-
-                    <Col lg={2} xs={12} >
-                        <Row style={{ width: '100%' }}>
-                            <div style={{ width: '80px', ...themeStyles.smallText3, ...Content.rowLeftStart }} > D.O.B </div>
-                            <div style={{ width: '100px', ...themeStyles.tableText }}> name </div>
-                        </Row>
-                        <Row style={{ width: '100%' }}>
-                            <div style={{ width: '80px', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Age </div>
-                            <div style={{ width: '100px', ...themeStyles.tableText }}> 49 </div>
+                            <div style={{ width: '60%', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Surname </div>
+                            <div style={{ width: '40%', ...themeStyles.tableText }}> Smithson </div>
                         </Row>
                     </Col>
 
-                    <Col lg={3} xs={12} >
+                    <Col lg={2} xs={12} style={{ marginRight: '25px' }} >
                         <Row style={{ width: '100%' }}>
-                            <div style={{ width: '80px', ...themeStyles.smallText3, ...Content.rowLeftStart }} > ID Card </div>
-                            <div style={{ width: '170px', ...themeStyles.tableText }}> 5843 2166 4567 8901 </div>
+                            <div style={{ width: '60%', ...themeStyles.smallText3, ...Content.rowLeftStart }} > D.O.B </div>
+                            <div style={{ width: '40%', ...themeStyles.tableText }}> 1/4/2023 </div>
                         </Row>
                         <Row style={{ width: '100%' }}>
-                            <div style={{ width: '80px', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Contact </div>
-                            <div style={{ width: '170px', ...themeStyles.tableText }}> 2166 4567 8901  </div>
+                            <div style={{ width: '60%', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Age </div>
+                            <div style={{ width: '40%', ...themeStyles.tableText }}> 49 </div>
+                        </Row>
+                    </Col>
+
+                    <Col lg={3} xs={12} style={{ marginRight: '25px' }} >
+                        <Row style={{ width: '100%' }}>
+                            <div style={{ width: '30%', ...themeStyles.smallText3, ...Content.rowLeftStart }}> ID Card </div>
+                            <div style={{ width: '70%', ...themeStyles.tableText }}> 5843 2166 4567 8901 </div>
+                        </Row>
+                        <Row style={{ width: '100%' }}>
+                            <div style={{ width: '40%', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Contact </div>
+                            <div style={{ width: '60%', ...themeStyles.tableText }}> London street </div>
                         </Row>
                     </Col>
 
 
-                    <Col lg={3} xs={12}  >
+                    <Col lg={3} xs={12} style={{ marginRight: '25px' }} >
                         <Row style={{ width: '100%' }}>
-                            <div style={{ width: '120px', ...themeStyles.smallText }} > Current Address </div>
-                            <div style={{ width: '170px', ...themeStyles.tableText }}> 556 london street </div>
+                            <div style={{ width: '60%', ...themeStyles.smallText3, ...Content.rowLeftStart }} > Current Address </div>
+                            <div style={{ width: '40%', ...themeStyles.tableText }}> London Street </div>
                         </Row>
                     </Col>
 
 
                 </Row>
+
 
 
                 <Row style={{ width: '100%', padding: '10px' }}>

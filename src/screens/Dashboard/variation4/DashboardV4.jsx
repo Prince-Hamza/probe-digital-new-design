@@ -20,8 +20,8 @@ function Dashboard(props) {
     const [selected, setSelected] = useState(1)
 
     const { appInfo, setAppInfo } = useContext(AppContext)
-    const itemWrapper = appInfo.sideBarExpanded ? { ...Styles.textWrap, width: '95%', justifyContent: 'flex-start' } : { ...Styles.textWrap, width: '70%', justifyContent: 'center' }
-    const itemWrapperVoid = appInfo.sideBarExpanded ? { ...Styles.textWrapVoid, width: '95%', justifyContent: 'flex-start' } : { ...Styles.textWrapVoid, width: '70%', justifyContent: 'center' }
+    const itemWrapper = appInfo.sideBarExpanded ? { ...Styles.textWrap, width: '99%', justifyContent: 'flex-start' } : { ...Styles.textWrap, width: '70%', justifyContent: 'center' }
+    const itemWrapperVoid = appInfo.sideBarExpanded ? { ...Styles.textWrapVoid, width: '99%', justifyContent: 'flex-start' } : { ...Styles.textWrapVoid, width: '70%', justifyContent: 'center' }
 
 
 
@@ -66,6 +66,8 @@ function Dashboard(props) {
 
                 <Col lg={appInfo.sideBarExpanded ? 2 : 1} xs={12} style={Styles.sideBar} className={'sidebar'}>
 
+
+
                     <div className={'sidebarInner'} style={Styles.sideBarInner} >
 
                         <Image src={logo} style={Styles.logo} />
@@ -102,8 +104,6 @@ function Dashboard(props) {
                     </div>
 
 
-
-
                     <div className={'sideBarInnerMobile'} onClick={() => { toggleMenuBarDisplay() }} >
                         <Col xs={1} >
                             <Image src={menu} style={{ width: '35px', height: '35px', marginLeft: '10px' }} />
@@ -131,6 +131,7 @@ export default Dashboard
 
 
 
+
 const Styles = ({
     container: {
         ...Content.rowLeftStart,
@@ -145,7 +146,7 @@ const Styles = ({
         background: 'rgba(255, 255, 255, 0.25)',
         borderRadius: '5px',
         marginBottom: '15px',
-        width: '95%',
+        width: '99%',
         height: '40px',
 
         display: 'flex',
@@ -163,7 +164,7 @@ const Styles = ({
     },
 
     sideBarInner: {
-        padding: '10px',
+        padding: '5px',
     },
 
     sideBarGradient: {
@@ -180,8 +181,8 @@ const Styles = ({
         padding: '0px',
         height: 'auto',
         backgroundColor: '#F5F5F5',
-        backgroundSize: 'cover',
-        ...Content.colTopLeft
+        // backgroundImage: `url(${Background})`,
+        backgroundSize: 'cover'
     },
     logo: {
         marginLeft: '8%',
@@ -199,13 +200,12 @@ const Styles = ({
     itemText: {
         fontFamily: 'Poppins',
         fontSize: '16px',
-        fontWeight: 500,
+        fontWeight: 400,
         lineHeight: '24px',
-        letterSpacing: '0em',
-        textAlign: 'center',
+        textAlign: 'left',
         color: 'white',
         cursor: 'pointer',
-        marginLeft: '10px'
+        marginLeft: '5px'
     },
     textWrapVoid: {
         marginBottom: '15px',

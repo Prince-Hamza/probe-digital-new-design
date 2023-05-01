@@ -9,18 +9,22 @@ export const info = ({
             {
                 title: 'Company Name',
                 lg: 4,
+                xs: 12
             },
             {
                 title: 'Jurisdiction',
-                lg: 4
+                lg: 4,
+                xs: 12
             },
             {
                 title: 'Solvent',
-                lg: 2
+                lg: 2,
+                xs: 12
             },
             {
                 title: 'Charges',
-                lg: 2
+                lg: 2,
+                xs: 12
             },
         ],
         rows: [
@@ -28,7 +32,7 @@ export const info = ({
                 items: [
                     {
                         text: 'Hubble Ltd',
-                        lg: 4
+                        lg: 4,
                     },
                     {
                         image: uk,
@@ -120,10 +124,12 @@ export const info = ({
             {
                 title: 'Legal Orders',
                 lg: 4,
+                xs: 12
             },
             {
                 title: 'Charges',
-                lg: 4
+                lg: 4,
+                xs: 12
             }
         ],
 
@@ -190,6 +196,7 @@ export const info = ({
             {
                 title: 'Assets',
                 lg: 4,
+                xs: 12
             },
 
         ],
@@ -235,11 +242,13 @@ export const info = ({
                 items: [
                     {
                         text: '',
-                        lg: 4
+                        lg: 4,
+                        xs: 12
                     },
                     {
                         text: '',
-                        lg: 4
+                        lg: 4,
+                        xs: 12
                     },
                 ]
             },
@@ -254,10 +263,12 @@ export const info = ({
             {
                 title: 'List Names',
                 lg: 4,
+                xs: 12
             },
             {
                 title: 'Charges',
-                lg: 4
+                lg: 4,
+                xs: 12
             }
         ],
         rows: [
@@ -309,9 +320,6 @@ export const info = ({
                     },
                 ]
             },
-
-
-
 
         ]
 
