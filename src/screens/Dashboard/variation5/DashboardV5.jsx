@@ -68,7 +68,6 @@ function Dashboard(props) {
 
                         <Image src={logo} style={Styles.logo} />
 
-
                         {appInfo.sideBarExpanded ?
                             <Col style={Styles.toggle} onClick={toggleSidebar} >  <Image src={arrow} style={Styles.arrowDark} /> </Col>
                             :
@@ -99,17 +98,14 @@ function Dashboard(props) {
 
                     </div>
 
-
-
-
-                    <div className={'sideBarInnerMobile'} onClick={() => { toggleMenuBarDisplay() }} >
+                    {/* <div className={'sideBarInnerMobile'} onClick={() => { toggleMenuBarDisplay() }} >
                         <Col xs={1} >
                             <Image src={menu} style={{ width: '35px', height: '35px', marginLeft: '10px' }} />
                         </Col>
                         <Col xs={11} style={{ ...Content.colCentrify, cursor: 'pointer' }} >
                             <Image src={logo} style={{ ...Styles.logo, marginTop: '20px' }} />
                         </Col>
-                    </div>
+                    </div> */}
 
 
                 </Col>
@@ -185,7 +181,7 @@ const Styles = ({
         ...Content.colTopLeft
     },
     logo: {
-        marginLeft: '8%',
+        marginLeft: '0%',
         marginTop: '5px',
         width: '75%',
         marginBottom: '30px'
@@ -232,7 +228,7 @@ const Styles = ({
     toggle: {
         position: 'absolute',
         top: '1%',
-        right: '1px',
+        right: '0px',
         cursor: 'pointer',
         width: '32px',
         height: '48px',
@@ -242,7 +238,7 @@ const Styles = ({
     toggleBlue: {
         position: 'absolute',
         top: '1%',
-        left: '88%',
+        left: '85%',
         cursor: 'pointer',
         width: '50px',
         height: '70px',

@@ -174,7 +174,7 @@ const Styles = ({
         backgroundSize: 'cover'
     },
     logo: {
-        marginLeft: '8%',
+        marginLeft: '0%',
         marginTop: '5px',
         width: '75%',
         marginBottom: '30px'
@@ -221,7 +221,7 @@ const Styles = ({
     toggle: {
         position: 'absolute',
         top: '1%',
-        right: '1px',
+        right: '0px',
         cursor: 'pointer',
         width: '32px',
         height: '48px',
@@ -231,7 +231,7 @@ const Styles = ({
     toggleBlue: {
         position: 'absolute',
         top: '1%',
-        left: '88%',
+        left: '85%',
         cursor: 'pointer',
         width: '50px',
         height: '70px',

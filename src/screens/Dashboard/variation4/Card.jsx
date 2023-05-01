@@ -5,20 +5,50 @@ import { themeStyles } from '../../../styles/theme';
 import uk from '../../../images/dashboard/uk.png'
 import tick from '../../../images/dashboard/tick.png'
 import cross from '../../../images/dashboard/cross.png'
-import './mobile.css'
 import { onMobile } from '../mobile';
+import companyIcon from '../../../images/dashboard/curentOrganization.png'
+import './mobile.css'
 
 function Card(props) {
     return (
         <Col lg={5} xs={12} style={Styles.cardBackground}>
 
             <Row lg={12} xs={12} style={Styles.cardHead}>
-                <div style={{ width: '130px' }} > Company Info  </div>
-                <div style={{ width: '75px' }} > menu </div>
+                <div style={{ width: '130px' }}> Company Info  </div>
+                <div style={{ width: '75px' }}> menu </div>
+            </Row>
+
+            <Row lg={12} xs={12} className='grayRow'>
+                <Col lg={4} xs={12} style={{ padding: '0px' }}>
+                    <Row style={{ width: '100%' }}>
+                        <Image src={companyIcon} style={Styles.grayRowIcon} />
+                        <div style={Styles.grayRowText}> Company Name </div>
+                    </Row>
+                </Col>
+
+                <Col lg={4} xs={12} style={{ padding: '0px' }}>
+                    <Row style={{ width: '100%' }}>
+                        <Image src={companyIcon} style={Styles.grayRowIcon} />
+                        <div style={Styles.grayRowText}> Jurisdiction </div>
+                    </Row>
+                </Col>
+
+                <Col lg={2} xs={12} style={{ padding: '0px' }}>
+                    <Row style={{ width: '100%' }}>
+                        <Image src={companyIcon} style={Styles.grayRowIcon} />
+                        <div style={Styles.grayRowText}> Solvent </div>
+                    </Row>
+                </Col>
+
+                <Col lg={2} xs={12} style={{ padding: '0px' }}>
+                    <Row style={{ width: '100%' }}>
+                        <Image src={companyIcon} style={Styles.grayRowIcon} />
+                        <div style={Styles.grayRowText}>Charges </div>
+                    </Row>
+                </Col>
             </Row>
 
             {/* skip row */}
-
 
             {[1, 2, 3, 4].map(() => {
                 return (
@@ -138,6 +168,16 @@ const Styles = ({
         padding: '0px',
         boxShadow: '0px 0px 5px 1px lightgray',
         ...Content.rowSpaceBetween
+    },
+ 
+    grayRowIcon: {
+        width: '40px',
+        height: '20px'
+    },
+    grayRowText: {
+        ...themeStyles.smallText3,
+        color: '#222',
+        width: '50%',
     },
     cardRow: {
         width: '100%',
