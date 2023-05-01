@@ -249,9 +249,7 @@ export const info = ({
 
 
     card4: {
-
         mainTitle: 'Company Info',
-
         headings: [
             {
                 title: 'List Names',
@@ -262,9 +260,7 @@ export const info = ({
                 lg: 4
             }
         ],
-
         rows: [
-
             {
                 items: [
                     {
@@ -301,7 +297,6 @@ export const info = ({
                     },
                 ]
             },
-
             {
                 items: [
                     {
