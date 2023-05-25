@@ -1,0 +1,16 @@
+.title {
+    font: 40px poppins;
+    font-weight: 520;
+    color: #021B41;
+    text-align: 'center';
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@media (max-width:500px) {
+    .title {
+        font: 30px poppins;
+        font-weight: 520;
+    }
+}

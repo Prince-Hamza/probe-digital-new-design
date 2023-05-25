@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Individuals",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "image": "Indie"
+    },
+    {
+        "name": "Investors",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "image": "Investment"
+    },
+    {
+        "name": "Legal Firms",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "image": "Scales"
+    },
+    {
+        "name": "Busnesses",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "image": "Business Building"
+    }
+]
