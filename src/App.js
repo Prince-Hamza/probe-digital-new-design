@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { AppContext } from './Context'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import NetEvents from './screens/NetEvents/NetEvents'
 import Main from './screens/Home/Main/Main'
 import About from './screens/About/About'
@@ -13,14 +13,17 @@ import DashboardV2 from './screens/Dashboard/variation2/DashboardV2'
 import DashboardV3 from './screens/Dashboard/variation3/DashboardV3'
 import DashboardV4 from './screens/Dashboard/variation4/DashboardV4'
 import DashboardV5 from './screens/Dashboard/variation5/DashboardV5'
-
+import PostBlogs from './screens/Blogs/Post/PostBlogs'
+import firebase from 'firebase/compat/app'
+import {config} from './config'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css'
-import PostBlogs from './screens/Blogs/Post/PostBlogs'
+
 
 function App() {
 
-  const [appData, setAppData] = useState({ userInfo: {}, groups: [], selectedGroup: {}, sideBarExpanded: true })
+  const [appData, setAppData] = useState({ userInfo: {}, groups: [], selectedGroup: {}, sideBarExpanded: true })  
+  if (!firebase.apps.length) firebase.initializeApp(config)
 
   return (
     <AppContext.Provider value={{ appInfo: appData, setAppInfo: setAppData }}>

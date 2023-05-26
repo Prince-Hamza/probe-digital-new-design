@@ -1,13 +1,12 @@
 import React from 'react';
 import { Button, Col, Form, Image, Row } from 'react-bootstrap';
 import { Content } from '../../../styles/styles';
-import { themeStyles } from '../../../styles/theme';
+import { themeStyles } from '../../../styles/theme'
 import man from '../../../images/dashboard/man.png'
-import Card from '../components/Card';
-import Header from '../components/Header';
-import { info } from './info';
-import FlexView from '../components/FlexView';
-
+import Card from '../components/Card'
+import Header from '../components/Header'
+import { info } from './info'
+import FlexView from '../components/FlexView'
 
 function Layout(props) {
 
@@ -108,8 +107,6 @@ function Layout(props) {
 }
 
 export default Layout
-
-
 
 
 const Styles = ({

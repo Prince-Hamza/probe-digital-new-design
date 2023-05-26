@@ -4,7 +4,12 @@ import { Content } from '../../../styles/styles'
 import { themeStyles } from '../../../styles/theme';
 import Sidebar from '../../Dashboard/components/Sidebar';
 import { AppContext } from '../../../Context';
+import firebase from 'firebase/compat/app'
+import { FirebaseStorage } from '../../../backend/storage/uploadToFirebase'
+import 'firebase/compat/firestore'
 import illus from '../../../images/dashboard/data-illustration.png'
+import axios from 'axios';
+const storage = new FirebaseStorage()
 
 function PostBlogs(props) {
 
@@ -13,21 +18,23 @@ function PostBlogs(props) {
 
     const [blog, setBlog] = useState({
         cover: undefined,
+        coverUrl: undefined,
         title: undefined,
         intro: undefined,
         content: [
-            {
-                subtitle: '',
-                text: '',
-                image: ''
-            }
+            // {
+            //     subtitle: '',
+            //     text: '',
+            //     image: '',
+            //     imageUrl:''
+            // }
         ]
     })
 
 
+    const [uploadBtnText, setUploadBtnText] = useState('Upload Blog')
     const [selectedSubtitle, setSelectedSubtitle] = useState('')
     const [selectedPara, setSelectedPara] = useState('')
-
     const [para, setPara] = useState('')
     const [subtitle, setSubtitle] = useState('')
 
@@ -45,15 +52,18 @@ function PostBlogs(props) {
     }
 
     const onChooseCover = (e) => {
-        blog.cover = URL.createObjectURL(e.target.files[0])
+        blog.cover = e.target.files[0]
+        blog.coverUrl = URL.createObjectURL(e.target.files[0])
+
         setBlog({ ...blog })
     }
 
     const onChoosePic = (e) => {
-        let object = ({ image: URL.createObjectURL(e.target.files[0]) })
+        let object = ({ image: e.target.files[0], imageUrl: URL.createObjectURL(e.target.files[0]) })
         blog.content.push(object)
         setBlog({ ...blog })
     }
+
 
 
     const insertCoverClick = () => {
@@ -65,6 +75,68 @@ function PostBlogs(props) {
         document.getElementById('choosePic').click()
     }
 
+    const onCompleteCoverImage = (url) => {
+        alert(`file uploaded: ${url}`)
+        blog.coverDownloadUrl = url
+        setBlog({ ...blog })
+    }
+
+    const onCompleteSectionImage = (url, index) => {
+        console.log(`file uploaded: ${url}`)
+        delete blog.content[index].image
+        blog.content[index].remoteImage = url
+    }
+
+    const onProgress = (progress) => {
+        console.log(`progress : ${progress}`)
+    }
+
+    const onError = (error) => {
+        alert(error)
+    }
+
+    function getRandomArbitrary(min, max) {
+        return Math.trunc(Math.random() * (max - min) + min)
+    }
+
+
+    const uploadBlog = async () => {
+
+        setUploadBtnText('Uploading...')
+
+
+        const res = await storage.uploadFileAsync('/blogs/image.png', blog.cover)
+        blog.coverDownloadUrl = res.downloadLink
+
+        const promises = blog.content.map(async (item, index) => {
+            if (item.image) {
+                const iresp = await storage.uploadFileAsync(`/blogs/344i/mage.png`, blog.cover)
+                blog.content[index].remoteImage = iresp.downloadLink
+            }
+            return
+        })
+
+        await Promise.all(promises)
+
+        delete blog.cover
+        blog.content.forEach((item) => {
+            if (item.image) delete item.image
+        })
+        setBlog({ ...blog })
+
+        console.log(`final json : ${JSON.stringify(blog, null, 4)}`)
+
+        const ipRes = await axios.get(`https://hutils.loxal.net/whois`)
+
+        firebase.firestore().collection('blogs').doc(ipRes.data.ip).set({
+            ip: ipRes.data.ip,
+            blogId: getRandomArbitrary(),
+            ...blog
+        })
+
+        alert('blog upoaded successfully')
+
+    }
 
     return (
         <Col lg={12}>
@@ -97,7 +169,6 @@ function PostBlogs(props) {
                                 <Col lg={1}>
                                     <Form.Text style={Styles.insertText} > Insert </Form.Text>
                                 </Col>
-
 
                                 <Col lg={2}>
                                     <Row style={{ width: '100%' }} onClick={(e) => { setSelectedSubtitle(true) }} >
@@ -156,7 +227,7 @@ function PostBlogs(props) {
 
                             <p style={themeStyles.heading4} > {blog.title} </p>
                             <br />
-                            {blog.cover && <Image style={{ width: '99%', height: '500px' }} src={blog.cover} />}
+                            {blog.coverUrl && <Image style={{ width: '99%', height: '500px' }} src={blog.coverUrl} />}
                             <br />
                             <br />
                             <p style={themeStyles.smallText2} > {blog.intro} </p>
@@ -164,14 +235,20 @@ function PostBlogs(props) {
                             {blog.content.map((item) => {
                                 return (
                                     <Col lg={12} key={Math.random()}>
-                                        {item.image && <Image style={{ width: '99%', height: '500px' }} src={item.image} />}
+                                        {item.image && <Image style={{ width: '99%', height: '500px' }} src={item.imageUrl} />}
                                         {item.subtitle && <Form.Text style={themeStyles.heading3} > {item.subtitle} </Form.Text>}
                                         {item.para && <Form.Text style={themeStyles.smallText2} > {item.para} </Form.Text>}
                                     </Col>
                                 )
                             })}
-                            
+
                         </Col>
+
+                        <br />
+
+                        <Button style={Styles.uploadButton} disabled={blog.coverUrl && blog.title && blog.intro ? false : true} onClick={() => { uploadBlog() }} >
+                            {uploadBtnText}
+                        </Button>
 
 
                         <input style={Styles.chooseCover} id={'chooseCover'} type={'file'} onChange={(e) => { onChooseCover(e) }} />
@@ -179,8 +256,6 @@ function PostBlogs(props) {
 
 
                     </Col>
-
-
                 </Col>
             </Row>
         </Col>
@@ -219,6 +294,12 @@ const Styles = ({
     },
     choosePic: {
         display: 'none'
+    },
+    uploadButton: {
+        borderRadius: '14px',
+        width: '200px',
+        height: '50px',
+        backgroundColor: 'blueviolet'
     }
 })
 
