@@ -246,7 +246,7 @@ function PostBlogs(props) {
 
                         <br />
 
-                        <Button style={Styles.uploadButton} disabled={blog.coverUrl && blog.title && blog.intro ? false : true} onClick={() => { uploadBlog() }} >
+                        <Button style={Styles.uploadButton} disabled={blog.coverUrl && blog.title && blog.intro && uploadBtnText !== 'Uploading...' ? false : true} onClick={() => { uploadBlog() }} >
                             {uploadBtnText}
                         </Button>
 
